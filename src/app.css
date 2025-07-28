@@ -1,1 +1,7 @@
 @import 'tailwindcss';
+
+
+@font-face {
+    font-family: 'Xanmono';
+    src: url("/Xanmono-Regular.ttf");
+}
