@@ -20,7 +20,7 @@
     });  
 </script>
 
-<main>
+<main class="overflow-hidden">
     <div class="absolute w-full h-screen bg-cover bg-fixed opacity-80 z-0" style="background-image: url('/bg_3ls.png'); background-position: bottom 40% center;"></div>
     <div class="w-full h-screen flex justify-center items-center -mt-[80px]">
         <h1 class="title">3LS</h1>
