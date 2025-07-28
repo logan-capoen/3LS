@@ -33,7 +33,7 @@
   });
 </script>
 
-<div class="w-full h-100 flex justify-between items-center">
+<div class="w-full h-70 flex justify-between items-center mt-50">
   <div class="left h-70 w-[50%]" style="
     clip-path: polygon(0% 0%, 100% 0, 88% 51%, 75% 100%, 0% 100%);
     background-image: url({background});
