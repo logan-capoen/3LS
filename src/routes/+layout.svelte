@@ -85,6 +85,17 @@
         </div>
     </div>
 	{@render children()}
+	<footer class="bg-[#0d1b2a] text-[#e0e1dd] w-full p-6">
+		<div class="flex flex-col items-center justify-center">
+			<div class="flex justify-center space-x-4 mb-4">
+				<!-- svelte-ignore a11y_invalid_attribute -->
+				<a href="https://www.youtube.com/@Threels-MM/shorts" class="text-[#e0e1dd] hover:text-[#415a77]">Youtube</a>
+				<!-- svelte-ignore a11y_invalid_attribute -->
+				<a href="https://www.tiktok.com/@threels_mm?is_from_webapp=1&sender_device=pc" class="text-[#e0e1dd] hover:text-[#415a77]">tiktok</a>
+			</div>
+			<p class="text-lg">©2025 3LS. Tous droits réservés.</p>
+		</div>
+	</footer>
 </main>
 
 <style>
@@ -93,4 +104,9 @@
         font-family: Xanmono;
         font-size: 30px;
     }
+	
+	a {
+		font-family: Xanmono;
+	}
+
 </style>

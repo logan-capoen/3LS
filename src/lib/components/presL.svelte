@@ -14,37 +14,38 @@
 
     // Utilisez des classes uniques pour chaque instance
     gsap.from(`.${className} .left-element`, {
-      x: '-80vw',
-      duration: 1,
-      scrollTrigger: {
-        trigger: `.${className} .left-element`,
-        start: 'top 80%',
-        toggleActions: 'play none none none',
-      }
+        x: '-80vw',
+        duration: 1,
+        ease: "power4.out",
+        scrollTrigger: {
+            trigger: `.${className} .left-element`,
+            start: 'top 80%',
+            toggleActions: 'play none none none',
+        }
     });
 
     gsap.from(`.${className} .right-element`, {
-      x: '80vw',
-      duration: 1,
-      scrollTrigger: {
-        trigger: `.${className} .right-element`,
-        start: 'top 80%',
-        toggleActions: 'play none none none',
-      }
+        x: '80vw',
+        duration: 1,
+        ease: "power4.out",
+        scrollTrigger: {
+            trigger: `.${className} .right-element`,
+            start: 'top 80%',
+            toggleActions: 'play none none none',
+        }
     });
   });
 </script>
 
-<div class="{className}">
-  <div class="w-full h-70 flex justify-between items-center mt-50">
-    <div class="left-element bg-[#778da914] h-70 w-[50%] flex justify-center items-center" style="clip-path: polygon(0% 0%, 75% 0%, 89% 57%, 100% 100%, 0% 100%); font-family: Xanmono;">
-      <p class="ml-10 mr-50 text-[#e0e1dd] text-[14px]">{description}</p>
-    </div>
-    <div class="right-element h-70 w-[50%]" style="
-      clip-path: polygon(0 0, 100% 0%, 100% 100%, 25% 100%, 14% 56%);
-      background-image: url({background});
-      background-size: cover;
-      background-position: center;
-    "></div>
-  </div>
+
+<div class="{className} w-full h-70 flex justify-between items-center mt-20">
+<div class="left-element bg-[#778da914] h-70 w-[50%] flex justify-center items-center" style="clip-path: polygon(0% 0%, 75% 0%, 89% 57%, 100% 100%, 0% 100%); font-family: Xanmono;">
+    <p class="ml-10 mr-50 text-[#e0e1dd] text-[14px]">{description}</p>
+</div>
+<div class="right-element h-70 w-[50%]" style="
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 25% 100%, 14% 56%);
+    background-image: url({background});
+    background-size: cover;
+    background-position: center;
+"></div>
 </div>
