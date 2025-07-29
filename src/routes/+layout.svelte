@@ -76,12 +76,13 @@
             </svg>
             <Navbutton name="2LS"/>
         </div>
-        <div class="w-full flex flex-col items-center justify-around min-h-[180px] mt-10 mb-[100px]">
+        <div class="w-full flex flex-col items-center justify-around min-h-[270px] mt-10 mb-[100px]">
             <h1 class="text">autres</h1>
             <svg class="drawingLine mt-5" width="175" height="6" viewBox="0 0 100 2" preserveAspectRatio="none">
                 <rect width="0" height="1" fill="#e0e1dd86" />
             </svg>
-            <Navbutton name="Tarkovpedia" background="/tarkov.png"/>
+            <Navbutton name="RatHub" background="/tarkov.png"/>
+            <Navbutton name="Ricky Games" background="/ricky.webp" site="/RickyGames"/>
         </div>
     </div>
 	{@render children()}

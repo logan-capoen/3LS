@@ -2,7 +2,6 @@
   import { gsap } from "gsap";
   import { onMount } from 'svelte';
   import { ScrollTrigger } from "gsap/ScrollTrigger";
-    import { bounceIn } from "svelte/easing";
 
   let {
     description = "fdzeligfupezhfpiuzehuifheziuhfiup zefh zepfhezpiuhfpzeiuhfpiuezhpfu ezpiuhfepzihfpiezhpfu ezfhpeizuhfpizehf pezpifhpizef",

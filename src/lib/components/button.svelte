@@ -1,14 +1,21 @@
 <script>
+    import { goto } from "$app/navigation";
+
     let {
         name = "title",
-        background = "/SpaceCake.png"
+        background = "/SpaceCake.png",
+        site="/"
     } = $props();
+
+    function entersite() {
+        goto(site);
+    }
 </script>
 
-<div
-    class="navbutton text-container text-[#e0e1dd] font-[Xanmono] w-40 h-15 text-[11px] bg-[#1b263b] cursor-pointer transition-all duration-500 button-clip-path relative overflow-hidden flex justify-center items-center"
-    style="--bg-image: url({background})"
->
+<!-- svelte-ignore a11y_click_events_have_key_events -->
+<!-- svelte-ignore a11y_no_static_element_interactions -->
+<!-- svelte-ignore event_directive_deprecated -->
+<div on:click={entersite} class="navbutton text-container text-[#e0e1dd] font-[Xanmono] w-40 h-15 text-[11px] bg-[#1b263b] cursor-pointer transition-all duration-500 button-clip-path relative overflow-hidden flex justify-center items-center" style="--bg-image: url({background})">
     <span class="text-content relative z-10 text-center">{@html name}</span>
 </div>
 
