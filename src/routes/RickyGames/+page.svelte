@@ -40,15 +40,15 @@
 
 <div class="overflow-hidden bg-[#1b263b] w-full h-1200">
     <div class="absolute w-full h-screen bg-cover bg-fixed opacity-80 z-0" style="background-image: url('/ricky2.png'); background-position: bottom 40% center;">
-    <img class="portal absolute top-1/6 -left-20" src="/portal.png" alt="portal">
+    <img class="portal absolute top-[90px] -left-20" src="/portal.png" alt="portal">
     </div>
     <div class="w-500 h-screen flex justify-start items-center -mt-[80px] ml-50 overflow-hidden">
-        <h1 class="title text-[140px]">Ricky Games</h1>
+        <h1 class="title text-[7.5vw]">Ricky Games</h1>
     </div>
     <div class="flex justify-around items-center mt-50">
-        <Game></Game>
-        <Game></Game>
-        <Game></Game>
+        <Game site="/RickyGames/game1" title="game1"></Game>
+        <Game site="/RickyGames/game2" title="game2"></Game>
+        <Game site="/RickyGames/game3" title="game3"></Game>
     </div>
 </div>
 

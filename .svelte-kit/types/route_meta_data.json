@@ -1,4 +1,13 @@
 {
 	"/": [],
-	"/RickyGames": []
+	"/RickyGames": [],
+	"/RickyGames/game1": [
+		"src/routes/RickyGames/game1/+page.js"
+	],
+	"/RickyGames/game2": [
+		"src/routes/RickyGames/game2/+page.js"
+	],
+	"/RickyGames/game3": [
+		"src/routes/RickyGames/game3/+page.js"
+	]
 }

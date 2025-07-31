@@ -4,6 +4,7 @@
     import { gsap } from "gsap";
     import { onMount } from 'svelte';
     import { SplitText } from 'gsap/SplitText';
+    import { fade } from 'svelte/transition';
 
     let navmenu = $state(false);
     let tl = gsap.timeline();
@@ -44,6 +45,10 @@
     function animateButtons() {
         tl.fromTo(".navbutton", { x: 1000 }, { x: 0, duration: 0.2, stagger: 0.1, ease: "power2.out" }, "-=1.5");
     }
+
+    function clickButton() {
+        navmenu = false;
+    }
 	
 	let { children } = $props();
 </script>
@@ -64,27 +69,34 @@
             <svg class="drawingLine mt-5" width="175" height="6" viewBox="0 0 100 2" preserveAspectRatio="none">
                 <rect width="0" height="1" fill="#e0e1dd86" />
             </svg>
-            <Navbutton name="Spacecake" background="/SpaceCake.png"/>
-            <Navbutton name="Jamaze" background="/JAMMAZE.png"/>
-            <Navbutton name="Matrix<br>Memories" background="/cave.png"/>
-            <Navbutton name="KIB.EXE" background="/KIB.png"/>
+            <Navbutton name="Spacecake" background="/SpaceCake.png" onClick={clickButton}/>
+            <Navbutton name="Jamaze" background="/JAMMAZE.png" onClick={clickButton}/>
+            <Navbutton name="Matrix<br>Memories" background="/cave.png" onClick={clickButton}/>
+            <Navbutton name="KIB.EXE" background="/KIB.png" onClick={clickButton}/>
         </div>
         <div class="w-full flex flex-col items-center justify-around min-h-[180px] mt-10">
             <h1 class="text">outils</h1>
             <svg class="drawingLine mt-5" width="175" height="6" viewBox="0 0 100 2" preserveAspectRatio="none">
                 <rect width="0" height="1" fill="#e0e1dd86" />
             </svg>
-            <Navbutton name="2LS"/>
+            <Navbutton name="2LS" onClick={clickButton}/>
         </div>
         <div class="w-full flex flex-col items-center justify-around min-h-[270px] mt-10 mb-[100px]">
             <h1 class="text">autres</h1>
             <svg class="drawingLine mt-5" width="175" height="6" viewBox="0 0 100 2" preserveAspectRatio="none">
                 <rect width="0" height="1" fill="#e0e1dd86" />
             </svg>
-            <Navbutton name="RatHub" background="/tarkov.png"/>
-            <Navbutton name="Ricky Games" background="/ricky.webp" site="/RickyGames"/>
+            <Navbutton name="RatHub" background="/tarkov.png" onClick={clickButton}/>
+            <Navbutton name="Ricky Games" background="/ricky.webp" site="/RickyGames" onClick={clickButton}/>
         </div>
     </div>
+    {#if navmenu}
+    <!-- svelte-ignore a11y_click_events_have_key_events -->
+    <!-- svelte-ignore a11y_no_static_element_interactions -->
+    <!-- svelte-ignore event_directive_deprecated -->
+    <div transition:fade class="fixed inset-0 bg-black/50 z-5 cursor-pointer" on:click={clickMenu}></div>
+    {/if}
+
 	{@render children()}
 	<footer class="bg-[#0d1b2a] text-[#e0e1dd] w-full p-6">
 		<div class="flex flex-col items-center justify-center">

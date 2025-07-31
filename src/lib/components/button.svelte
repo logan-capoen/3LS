@@ -4,10 +4,12 @@
     let {
         name = "title",
         background = "/SpaceCake.png",
-        site="/"
+        site="/",
+        onClick = () => {}
     } = $props();
 
     function entersite() {
+        onClick();
         goto(site);
     }
 </script>

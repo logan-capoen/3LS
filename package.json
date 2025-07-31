@@ -23,6 +23,7 @@
 		"vite": "^7.0.4"
 	},
 	"dependencies": {
+		"@iconify/svelte": "^5.0.1",
 		"gsap": "^3.13.0"
 	}
 }
