@@ -1,33 +1,55 @@
 <script>
     import { gsap } from "gsap";
-    import { onMount } from 'svelte';
+    import { onMount, onDestroy } from 'svelte';
     import { ScrollTrigger } from "gsap/ScrollTrigger";
     import Game from "$lib/components/games.svelte";
     import Wave from "$lib/components/wave.svelte"
 
     let tl = gsap.timeline();
 
-    onMount(() => {
-        gsap.registerPlugin(ScrollTrigger);
-        if (typeof window !== 'undefined') {
-            tl.from(".portal", {
-                delay: 0.3,
-                x: 950,
-                y: 200,
-                width: 0,
-                duration: 0.8,
-                ease: "expo.out"
-            });
-            tl.from(".title", {
+    function startAnim() {
+        tl.clear(); // reset la timeline à chaque visite
+
+        tl.from(".portal", {
+            delay: 0.3,
+            x: 700,
+            y: -150,
+            width: 0,
+            duration: 0.8,
+            ease: "expo.out"
+        });
+        tl.from(".title", {
             duration: 1.6,
             stagger: 0.3,
             x: -2000,
             delay: 0.3,
             ease: "expo.out"
         });
+    }
+
+    onMount(() => {
+        gsap.registerPlugin(ScrollTrigger);
+
+        if (typeof window !== 'undefined') {
+            const img = document.querySelector(".portal");
+            
+            // Si l'image est déjà en cache
+            // @ts-ignore
+            if (img.complete) {
+                startAnim();
+            } else {
+                // @ts-ignore
+                img.addEventListener("load", startAnim, { once: true });
+            }
         }
     });
+
+    // Optionnel : éviter fuites mémoire
+    onDestroy(() => {
+        tl.kill();
+    });
 </script>
+
 
 <div class="overflow-hidden bg-[#1b263b] w-full z-10">
     <div class="absolute w-full flex justify-start items-center h-screen bg-cover bg-fixed opacity-80 z-0" style="background-image: url('/ricky2.png'); background-position: bottom 40% center;">
