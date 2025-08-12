@@ -99,7 +99,7 @@
     </div>
   {:else if currentmorty}
     <!-- 👇 Jeu actif -->
-    <h1 class="text-[#e0e1dd] text-[40px] mb-15">Qui est ce morty ?</h1>
+    <h1 class="text-[#e0e1dd] text-[40px] mb-15 md:mt-0 mt-20">Qui est ce morty ?</h1>
 
     <div class="relative w-[300px] h-[300px] mb-4">
       <img src={currentmorty.image} alt="personnage" class="w-full h-full object-cover rounded-2xl {validationStatus || skipMode ? 'grayscale' : ''}"/>

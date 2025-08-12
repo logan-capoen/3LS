@@ -102,7 +102,7 @@
         </button>
       </div>
     {:else}
-      <h1 class="text-4xl font-bold mb-10 text-center text-[#778da9]">
+      <h1 class="text-4xl font-bold mb-10 text-center text-[#778da9] md:mt-0 mt-20">
         Qui est : <span class="text-[#f0ebd8]">{targetRick?.name}</span> ?
       </h1>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
