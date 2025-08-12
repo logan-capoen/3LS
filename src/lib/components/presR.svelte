@@ -49,16 +49,16 @@
 </script>
 
 <!-- svelte-ignore a11y_no_static_element_interactions -->
-<div class="{className} w-full h-70 flex justify-between items-center mt-20">
+<div class="{className} w-full h-75 flex justify-between items-center mt-20">
   <!-- svelte-ignore a11y_click_events_have_key_events -->
   <!-- svelte-ignore event_directive_deprecated -->
-  <div on:click={gotopage} class={` ${site != 'none' ? 'cursor-pointer' : ''} left-element h-70 w-[50%] shadow-2xl`} style="
+  <div on:click={gotopage} class={` ${site != 'none' ? 'cursor-pointer' : ''} left-element h-75 w-[50%] shadow-2xl`} style="
     clip-path: polygon(0% 0%, 100% 0, 88% 51%, 75% 100%, 0% 100%);
     background-image: url({background});
     background-size: cover;
     background-position: center;
   "></div>
-  <div class="right-element bg-[#778da914] h-70 w-[50%] flex justify-center items-center shadow-2xl" style="clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0 100%, 12% 50%); font-family: Xanmono;">
+  <div class="right-element bg-[#778da914] h-75 w-[50%] flex justify-center items-center shadow-2xl" style="clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0 100%, 12% 50%); font-family: Xanmono;">
     <p class="ml-[15vw] mr-[4vw] text-[#e0e1dd] text-center" style="font-size: clamp(8px,1vw,{size}px);">{@html description}</p>
   </div>
 </div>

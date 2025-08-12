@@ -25,15 +25,15 @@
     });
 </script>
 
-<div class="bg-[#1b263b] flex flex-col items-center">
+<div class="bg-[#1b263b] flex flex-col items-center w-full overflow-hidden">
     <div class="absolute w-full h-screen bg-cover bg-fixed opacity-80 z-0" style="background-image: url('/cave.png'); background-position: bottom 40% center;"></div>
     <div class="w-full h-screen flex justify-center items-center -mt-[80px]">
-        <h1 class="title text-[120px] text-[#e0e1dd] text-center">Matrix<br>Memories</h1>
+        <h1 class="title text-[clamp(30px,12vw,120px)] text-[#e0e1dd] text-center">Matrix<br>Memories</h1>
     </div>
     <div class="mt-30"></div>
     <!-- svelte-ignore a11y_missing_attribute -->
-    <Wave text="A propos de<br> Matrix Memories" size={80} speed={0.1}></Wave>
-    <p class="mt-15 w-265 text-center"><strong>Qu'est-ce que Matrix Memories ?</strong></p>
+    <Wave text="A propos de<br> Matrix Memories" size={70} speed={0.1} msize={6}></Wave>
+    <p class="mt-15  text-center text-[clamp(6px,4vw,30px)]"><strong>Qu'est-ce que Matrix Memories ?</strong></p>
     <PresR size={12} className="presR-1" background="/cave.png" description="Matrix Memories est l’un des plus grands jeux que je prévois de créer. Il reprendra des mécaniques phares de plusieurs jeux tout en apportant sa propre touche de nouveauté, tant au niveau du gameplay que du lore, innovant et immersif. Soyez sûr que ce jeu vous surprendra comme aucun autre."/>   
     <PresL size={12} className="presL-1" background="/cave.png" description="Pour suivre son évolution, n’hésitez pas à me suivre sur mes réseaux sociaux, disponibles en bas de la page."/>
     <div class="py-15"></div>
@@ -42,7 +42,6 @@
 <style>
     p {
         color: #e0e1dd;
-        font-size: 30px;
         font-family: Xanmono;
     }
     h1 {

@@ -7,6 +7,7 @@
     export let text = "default text";
     export let className = "classDefault";
     export let size = 140;
+    export let msize = 40;
     export let speed = 0.1;
 
     onMount(() => {
@@ -29,4 +30,4 @@
     });
 </script>
 
-<h1 class="{className} text-center" style="font-size: clamp(40px,15vw,{size}px); color: #e0e1dd; font-family: Xanmono;">{@html text}</h1>
+<h1 class="{className} text-center" style="font-size: clamp({msize}px,6vw,{size}px); color: #e0e1dd; font-family: Xanmono;">{@html text}</h1>

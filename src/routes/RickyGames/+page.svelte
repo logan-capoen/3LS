@@ -30,14 +30,14 @@
 </script>
 
 <div class="overflow-hidden bg-[#1b263b] w-full z-10">
-    <div class="absolute w-full h-screen bg-cover bg-fixed opacity-80 z-0" style="background-image: url('/ricky2.png'); background-position: bottom 40% center;">
-        <img class="portal absolute top-[90px] -left-20" src="/portal.png" alt="portal">
+    <div class="absolute w-full flex justify-start items-center h-screen bg-cover bg-fixed opacity-80 z-0" style="background-image: url('/ricky2.png'); background-position: bottom 40% center;">
+        <img class="portal absolute -left-20" src="/portal.png" alt="portal">
     </div>
-    <div class="w-500 h-screen flex justify-start items-center -mt-[80px] ml-50 overflow-hidden">
+    <div class=" h-screen flex justify-start items-center ml-50 overflow-hidden">
         <h1 class="title text-[7.5vw]">Ricky Games</h1>
     </div>
     <div class="flex flex-wrap justify-around items-center mt-50 gap-y-10">
-    <Wave speed={0.1} text="Guess the character" className="waveone" size={40}/>
+    <Wave speed={0.1} text="Guess the<br> character" className="waveone" size={40} msize={20}/>
     </div>
     <div class="flex flex-wrap justify-around items-center mt-20 gap-y-10">
         <Game site="/RickyGames/guesscharacter" title="character" type="character"></Game>
@@ -45,7 +45,7 @@
         <Game site="/RickyGames/guessmorty" title="morty" type="morty"></Game>
     </div>
     <div class="flex flex-wrap justify-around items-center mt-50 gap-y-10">
-    <Wave speed={0.1} text="Find the character" className="wavetwo" size={40}/>
+    <Wave speed={0.1} text="Find the<br> character" className="wavetwo" size={40} msize={20}/>
     </div>
     <div class="flex flex-wrap justify-around items-center mt-20 gap-y-10 mb-15">
         <Game site="/RickyGames/findcharacter" title="character" className="gametwo" type="character"></Game>
