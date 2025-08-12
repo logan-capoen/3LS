@@ -11,7 +11,6 @@
         tl.clear(); // reset la timeline à chaque visite
 
         tl.from(".portal", {
-            delay: 0.3,
             x: 700,
             y: -150,
             width: 0,
