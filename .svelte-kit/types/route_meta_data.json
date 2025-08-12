@@ -1,13 +1,26 @@
 {
 	"/": [],
+	"/Jammaze": [],
+	"/KIB": [],
+	"/MM": [],
 	"/RickyGames": [],
-	"/RickyGames/game1": [
-		"src/routes/RickyGames/game1/+page.js"
+	"/RickyGames/findcharacter": [
+		"src/routes/RickyGames/findcharacter/+page.js"
 	],
-	"/RickyGames/game2": [
-		"src/routes/RickyGames/game2/+page.js"
+	"/RickyGames/findmorty": [
+		"src/routes/RickyGames/findmorty/+page.js"
 	],
-	"/RickyGames/game3": [
-		"src/routes/RickyGames/game3/+page.js"
-	]
+	"/RickyGames/findrick": [
+		"src/routes/RickyGames/findrick/+page.js"
+	],
+	"/RickyGames/guesscharacter": [
+		"src/routes/RickyGames/guesscharacter/+page.js"
+	],
+	"/RickyGames/guessmorty": [
+		"src/routes/RickyGames/guessmorty/+page.js"
+	],
+	"/RickyGames/guessrick": [
+		"src/routes/RickyGames/guessrick/+page.js"
+	],
+	"/SpaceCake": []
 }

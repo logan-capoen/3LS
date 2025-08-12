@@ -90,3 +90,27 @@ export async function getAllRicks() {
 
   return allRicks;
 }
+
+export async function getAllMortys() {
+  const firstRes = await fetch(`${API_URL}/character?name=morty`);
+  const firstData = await firstRes.json();
+
+  const totalPages = firstData.info.pages;
+
+  // Requête pour les pages 2 à totalPages
+  const promises = [];
+  for (let i = 2; i <= totalPages; i++) {
+    promises.push(fetch(`${API_URL}/character?page=${i}&name=morty`));
+  }
+
+  const results = await Promise.all(promises);
+  const restData = await Promise.all(results.map(res => res.json()));
+
+  // Combine tous les personnages
+  const allMortys = [
+    ...firstData.results,
+    ...restData.flatMap(data => data.results)
+  ];
+
+  return allMortys;
+}
