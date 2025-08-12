@@ -24,10 +24,10 @@
     });
 </script>
 
-<div class="overflow-hidden bg-[#1b263b] w-full h-1070">
+<div class="overflow-hidden bg-[#1b263b] w-full">
     <div class="absolute w-full h-screen bg-cover bg-fixed opacity-80 z-0" style="background-image: url('/bg_3ls.png'); background-position: bottom 40% center;"></div>
     <div class="w-full h-screen flex justify-center items-center -mt-[80px]">
-        <h1 class="title text-[180px]">3LS</h1>
+        <h1 class="title text-[clamp(60px,20vw,180px)]">3LS</h1>
     </div>
     <div class="flex flex-col justify-center items-center mt-30">
         <Wave text="Jeux" className="wave1"/>
@@ -40,7 +40,7 @@
         <Wave text="Outils" className="wave2"/>
         <PresR className="presR-3" description="2LS est une petite idée qui va se construire petit à petit. Le but est de créer un hub rassemblant tous les outils web utiles pour les développeurs, qu’ils soient externes ou développés par nous-mêmes."/>   
     </div>
-    <div class="flex flex-col justify-center items-center mt-30">
+    <div class="flex flex-col justify-center items-center mt-30 mb-20">
         <Wave text="Autres" className="wave3"/>
         <PresL site="ratkov" className="presL-3" background="/tarkov.png" description="RatHub est, comme son nom l'indique, un hub dédié aux plus gros rats de Tarkov. Ceux qui veulent tout savoir sur ce qu’ils lootent, et bien plus encore. Ici, vous trouverez toutes les informations dont vous avez besoin, que vous soyez débutant ou expert sur Escape from Tarkov."/>   
         <PresR site="RickyGames" className="presR-4" background="/ricky2.png" description="Ricky Games regroupe une série de mini-jeux pour tester vos connaissances sur Rick et Morty. Mais attention : même les plus grands fans risquent de transpirer. Bonne chance !"/>

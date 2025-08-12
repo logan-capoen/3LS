@@ -59,6 +59,6 @@
     background-position: center;
   "></div>
   <div class="right-element bg-[#778da914] h-70 w-[50%] flex justify-center items-center shadow-2xl" style="clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0 100%, 12% 50%); font-family: Xanmono;">
-    <p class="ml-50 mr-10 text-[#e0e1dd] text-center" style="font-size: {size}px;">{@html description}</p>
+    <p class="ml-[15vw] mr-[4vw] text-[#e0e1dd] text-center" style="font-size: clamp(8px,1vw,{size}px);">{@html description}</p>
   </div>
 </div>

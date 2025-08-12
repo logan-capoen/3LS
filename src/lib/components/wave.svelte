@@ -29,4 +29,4 @@
     });
 </script>
 
-<h1 class="{className} text-center" style="font-size: {size}px; color: #e0e1dd; font-family: Xanmono;">{@html text}</h1>
+<h1 class="{className} text-center" style="font-size: clamp(40px,15vw,{size}px); color: #e0e1dd; font-family: Xanmono;">{@html text}</h1>

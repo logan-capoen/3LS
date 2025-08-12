@@ -52,7 +52,7 @@
 
 <div class="{className} w-full h-70 flex justify-between items-center mt-20">
   <div class="left-element bg-[#778da914] h-70 w-[50%] flex justify-center items-center shadow-2xl" style="clip-path: polygon(0% 0%, 75% 0%, 89% 57%, 100% 100%, 0% 100%); font-family: Xanmono;">
-      <p class="ml-10 mr-50 text-[#e0e1dd] text-center" style="font-size: {size}px;">{@html description}</p>
+      <p class="ml-[4vw] mr-[15vw] text-[#e0e1dd] text-center" style="font-size: clamp(8px,1vw,{size}px);">{@html description}</p>
   </div>
   <!-- svelte-ignore a11y_click_events_have_key_events -->
   <!-- svelte-ignore a11y_no_static_element_interactions -->
